@@ -1,0 +1,91 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	min-height: 100vh;
+	text-align: center;
+	background-color: var(--white);
+	width: var(--nav-bar-width);
+	padding: 2rem;
+}
+
+.header .logo {
+	font-size: 1.5rem;
+	color: var(--text);
+}
+
+.header .logo span {
+	color: var(--btn-color);
+}
+
+.header .profile {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
+	border-radius: .5rem;
+	background-color: var(--light-bg);
+}
+
+.header .profile p {
+	color: var(--text);
+}
+
+.header .navbar {
+	display: flex;
+	flex-direction: column;
+}
+
+.header .navbar a {
+	border-radius: .5rem;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	color: var(--text);
+	text-align: left;
+	padding: 1rem 1rem;
+	transition: .1s background-color linear;
+}
+
+.header .navbar a.on-page {
+	background-color: #527496;
+	color: var(--text-hover);
+	position: relative;
+}
+
+.header .navbar a:hover {
+	color: var(--text-hover);
+	background-color: var(--btn-hover);
+}
+
+.header .navbar a .bi {
+	width: var(--icon-size);
+	height: var(--icon-size);
+	transition: .1s linear;
+}
+
+.bi-plus-square-fill {
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+@media (max-width:1200px) {
+	:root {
+		--nav-bar-width: 35vw;
+	}
+
+	.header {
+		left: -35rem;
+		transition: .2s linear;
+	}
+
+	.header.active {
+		left: 0rem;
+		box-shadow: 0 0 0 100vw rgba(0, 0, 0, .7);
+	}
+}

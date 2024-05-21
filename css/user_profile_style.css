@@ -1,0 +1,48 @@
+body {
+    align-items: flex-start;
+}
+
+main {
+    padding-top: 4rem;
+}
+
+main h3 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+main .user-data p:not(:first-child){
+    font-size: .9rem;
+}
+
+main .user-data > :first-child {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+main form, main .user-data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main form input[type="submit"] {
+    width: min-content;
+    font-size: .8rem;
+    padding: .75rem 1rem;
+}
+
+main form .input-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+main form .input-data label {
+    font-size: .75rem;
+}
+
+main form .input-data input {
+    padding: 0.5rem;
+    border-radius: 5px;
+}

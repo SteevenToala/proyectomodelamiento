@@ -1,0 +1,48 @@
+:root {
+    --bg-message: var(--light-bg);
+    --bg-bar: var(--text);
+}
+
+.message {
+    border: 1px solid rgba(201, 201, 201, 0.404);
+    background-color: var(--bg-message);
+    padding: .8rem 1rem;
+    padding-top: calc(1rem - .4rem);
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    position: fixed;
+    top: 1.65rem;
+    z-index: 20;
+    
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.message .stat-bar {
+    background-color: var(--bg-bar);
+    height: .4rem;
+    width: 100.5%;
+    position: absolute;
+    top: -.4rem;
+    left: -1px;
+    animation: reduce 10s linear forwards; 
+}
+
+.message .bi {
+    cursor: pointer;
+}
+
+.message .bi:hover {
+    color: white;
+}
+
+@keyframes reduce {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}

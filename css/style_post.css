@@ -1,0 +1,94 @@
+:root {
+    --icon-color: black;
+    --icon-hover-color: var(--button-text);
+    --bg-icon-hover: var(--light-bg);
+    --bg-icon: white;
+}
+
+.user-comments-container .comment-box {
+    position: relative;
+    --opacity: 0;
+}
+
+.user-comments-container .comment-box:hover {
+    background-color: red;
+    --opacity: 1;
+}
+
+.user-comments-container .comment-box .options {
+    opacity: var(--opacity);
+    color: var(--icon-color);
+    display: flex;
+    gap: .2rem;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all .1s;
+}
+
+.user-comments-container .comment-box .options button svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.user-comments-container .comment-box .options button{
+    background-color: var(--bg-icon);
+    display: flex;
+    align-items: center;
+    padding: .4rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.user-comments-container .comment-box .options button:hover{
+    color: var(--icon-hover-color);
+    transition: all .2s;
+    background-color: var(--bg-icon-hover);
+}
+
+.posts-container .box-container .box .post-content {
+    flex-direction: column;
+    align-items: center;
+}
+
+.posts-container .box-container .box .post-content .post-info {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.posts-container .box-container .box .post-content .post-info .post-cat {
+    align-self: flex-start;
+}
+
+.posts-container .box-container .box .post-content .post-info .link-post {
+    align-self: center;
+}
+
+.posts-container .box-container .box .post-content .post-cont-image {
+    max-width: 70%;
+    min-width: 20%;
+    max-height: max-content;
+}
+
+.posts-container .box-container .box .post-content .post-cont-image .post-image {
+    width: 100%;
+}
+
+.posts-container .box-container .box .post-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.posts-container .box-container .box .post-content .post-text {
+    -webkit-line-clamp: unset;
+    max-height: max-content;
+}
+
+.posts-container .box-container .box .post-content .post-text::after {
+    content: none;
+}
+
